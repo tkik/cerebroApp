@@ -58,9 +58,7 @@ server <- function(input, output, session) {
 
   ## paths for storing plots
   available_storage_volumes <- c(
-    Home = "~",
-    shinyFiles::getVolumes()()
-  )
+"C:/Temp/figs/"  )
 
   ##--------------------------------------------------------------------------##
   ## Load data set.
@@ -76,7 +74,7 @@ server <- function(input, output, session) {
     if (
       !is.null(input[["input_file"]]) &&
       !is.na(input[["input_file"]]) &&
-      file.exists(input[["input_file"]]$datapath)
+      file.exists(input[["input_file"]])[1]
     ) {
       path_to_load <- input[["input_file"]]$datapath
     ## take path or object from 'Cerebro.options' if it is set and points to an

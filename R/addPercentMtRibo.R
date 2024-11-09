@@ -263,8 +263,8 @@ addPercentMtRibo <- function(
       )
     )
   } else {
-    object$percent_mt <- values_mt
-    object$percent_ribo <- values_ribo
+    object$genes_mt <- values_mt
+    object$genes_ribo <- values_ribo
   }
 
   ##--------------------------------------------------------------------------##
